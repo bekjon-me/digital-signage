@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { useI18n } from 'vue-i18n'
+  import { useI18n } from "vue-i18n";
 
-const { t } = useI18n()
+  const { t } = useI18n();
 </script>
 
 <template>
@@ -11,3 +11,9 @@ const { t } = useI18n()
     </Button>
   </main>
 </template>
+
+<route lang="yaml">
+meta:
+  layout: empty
+  requiresAuth: true
+</route>
