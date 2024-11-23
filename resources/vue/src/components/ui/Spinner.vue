@@ -1,12 +1,12 @@
 <script setup lang="ts">
-import { cn } from '@/lib/utils'
+  import { cn } from "@/lib/utils";
 
-interface spinnerProps {
-  size?: string
-  class?: string
-}
+  interface spinnerProps {
+    size?: string;
+    class?: string;
+  }
 
-const props = defineProps<spinnerProps>()
+  const props = defineProps<spinnerProps>();
 </script>
 
 <template>

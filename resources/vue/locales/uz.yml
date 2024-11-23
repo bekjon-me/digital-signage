@@ -1,2 +1,20 @@
-button: Hammaga salom, men Shadcn yordamida yaratilgan tugmaman!
-about: Bu about sahifasi
+navigation:
+  register: Ro'yxatdan o'tish
+  login: Hisobga kirish
+headings:
+  create_new_account: Yangi hisob yaratish
+  login: Hisobga kirish
+button:
+  submit: Tasdiqlash
+  cancel: Bekor qilish
+  register: Ro'yxatdan o'tish
+  login: Kirish
+  logout: Chiqish
+label:
+  name: Ism
+  company_name: Tashkilot nomi
+  email: Elektron pochta
+  password: Parol
+  password_confirmation: Parolni tasdiqlash
+messages:
+  password_mismatch: Parollar mos emas

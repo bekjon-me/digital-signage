@@ -1,38 +1,38 @@
 <script setup lang="ts">
-import type { ButtonHTMLAttributes } from 'vue'
-import { Icon } from '@/components/ui/icon'
-import Spinner from '@/components/ui/Spinner.vue'
-import { cn } from '@/lib/utils'
-import { icons } from 'lucide-vue-next'
-import { Primitive, type PrimitiveProps } from 'radix-vue'
-import { computed } from 'vue'
-import { type ButtonVariants, buttonVariants, IconSize } from '.'
+  import type { ButtonHTMLAttributes } from "vue";
+  import { Icon } from "@/components/ui/icon";
+  import Spinner from "@/components/ui/Spinner.vue";
+  import { cn } from "@/lib/utils";
+  import { icons } from "lucide-vue-next";
+  import { Primitive, type PrimitiveProps } from "radix-vue";
+  import { computed } from "vue";
+  import { type ButtonVariants, buttonVariants, IconSize } from ".";
 
-export interface ButtonProps extends PrimitiveProps, /* @vue-ignore */ ButtonHTMLAttributes {
-  as?: keyof HTMLElementTagNameMap
-  asChild?: boolean
-  loading?: boolean
-  loadingText?: string
-  variant?: ButtonVariants['variant']
-  size?: ButtonVariants['size']
-  icon?: keyof typeof icons
-  iconPosition?: ButtonVariants['iconPosition']
-  class?: string
-  label?: string
-}
+  export interface ButtonProps extends PrimitiveProps, /* @vue-ignore */ ButtonHTMLAttributes {
+    as?: keyof HTMLElementTagNameMap;
+    asChild?: boolean;
+    loading?: boolean;
+    loadingText?: string;
+    variant?: ButtonVariants["variant"];
+    size?: ButtonVariants["size"];
+    icon?: keyof typeof icons;
+    iconPosition?: ButtonVariants["iconPosition"];
+    class?: string;
+    label?: string;
+  }
 
-const props = withDefaults(defineProps<ButtonProps>(), {
-  as: 'button',
-  asChild: false,
-  loading: false,
-  iconPosition: 'default',
-  label: 'Button',
-})
-defineSlots<{
-  default: (props: object) => any
-}>()
+  const props = withDefaults(defineProps<ButtonProps>(), {
+    as: "button",
+    asChild: false,
+    loading: false,
+    iconPosition: "default",
+    label: "Button",
+  });
+  defineSlots<{
+    default: (props: object) => any;
+  }>();
 
-const shouldHideText = computed(() => props.iconPosition === 'default' && props.icon)
+  const shouldHideText = computed(() => props.iconPosition === "default" && props.icon);
 </script>
 
 <template>

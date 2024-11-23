@@ -1,8 +1,8 @@
-import config from '@/components/ui/components-config.json'
-import { cva, type VariantProps } from 'class-variance-authority'
-import { icons } from 'lucide-vue-next'
+import config from "@/components/ui/components-config.json";
+import { cva, type VariantProps } from "class-variance-authority";
+import { icons } from "lucide-vue-next";
 
-export { default as Button } from './Button.vue'
+export { default as Button } from "./Button.vue";
 
 export const buttonVariants = cva(config.button.root, {
   variants: {
@@ -23,87 +23,87 @@ export const buttonVariants = cva(config.button.root, {
     },
     icon: {
       ...Object.keys(icons).reduce((acc: { [key: string]: string }, key) => {
-        acc[key] = config.button.icon.root || ''
-        return acc
+        acc[key] = config.button.icon.root || "";
+        return acc;
       }, {}),
     },
     iconPosition: {
-      prefix: '',
-      suffix: '',
-      default: '',
+      prefix: "",
+      suffix: "",
+      default: "",
     },
   },
   compoundVariants: [
     {
-      iconPosition: 'prefix',
+      iconPosition: "prefix",
       icon: [...Object.keys(icons)],
-      size: 'sm',
+      size: "sm",
       className: config.button.iconPosition.prefix.small,
     },
     {
-      iconPosition: 'prefix',
+      iconPosition: "prefix",
       icon: [...Object.keys(icons)],
-      size: 'default',
+      size: "default",
       className: config.button.iconPosition.prefix.default,
     },
     {
-      iconPosition: 'prefix',
+      iconPosition: "prefix",
       icon: [...Object.keys(icons)],
-      size: 'lg',
+      size: "lg",
       className: config.button.iconPosition.prefix.large,
     },
     // suffix cases
     {
-      iconPosition: 'suffix',
+      iconPosition: "suffix",
       icon: [...Object.keys(icons)],
-      size: 'sm',
+      size: "sm",
       className: config.button.iconPosition.suffix.small,
     },
     {
-      iconPosition: 'suffix',
+      iconPosition: "suffix",
       icon: [...Object.keys(icons)],
-      size: 'default',
+      size: "default",
       className: config.button.iconPosition.suffix.default,
     },
     {
-      iconPosition: 'suffix',
+      iconPosition: "suffix",
       icon: [...Object.keys(icons)],
-      size: 'lg',
+      size: "lg",
       className: config.button.iconPosition.suffix.large,
     },
     // default cases
     {
-      iconPosition: 'default',
+      iconPosition: "default",
       icon: [...Object.keys(icons)],
-      size: 'sm',
+      size: "sm",
       className: config.button.iconPosition.default.small,
     },
     {
-      iconPosition: 'default',
+      iconPosition: "default",
       icon: [...Object.keys(icons)],
-      size: 'default',
+      size: "default",
       className: config.button.iconPosition.default.default,
     },
     {
-      iconPosition: 'default',
+      iconPosition: "default",
       icon: [...Object.keys(icons)],
-      size: 'lg',
+      size: "lg",
       className: config.button.iconPosition.default.large,
     },
     {
-      variant: ['link', 'linkDestructive'],
-      className: 'p-0 text-sm font-medium tracking-0',
+      variant: ["link", "linkDestructive"],
+      className: "p-0 text-sm font-medium tracking-0",
     },
   ],
   defaultVariants: {
-    variant: 'main',
-    size: 'default',
-    iconPosition: 'default',
+    variant: "main",
+    size: "default",
+    iconPosition: "default",
     icon: null,
   },
-})
+});
 
-export const IconSize = cva('', {
+export const IconSize = cva("", {
   variants: {
     size: {
       default: config.button.icon.size.default,
@@ -112,8 +112,8 @@ export const IconSize = cva('', {
     },
   },
   defaultVariants: {
-    size: 'default',
+    size: "default",
   },
-})
+});
 
-export type ButtonVariants = VariantProps<typeof buttonVariants>
+export type ButtonVariants = VariantProps<typeof buttonVariants>;
